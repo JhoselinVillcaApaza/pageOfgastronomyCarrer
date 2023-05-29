@@ -1,0 +1,501 @@
+/*variables*/
+:root{
+    --principal: #0C134F;
+    --secundario: #1D267D;
+    --oscuro: #5C469C;
+    --claro: #D4ADFC;
+    --claro2: rgba(212, 175, 71, 0.3);
+    --claro3: rgba(243, 197, 113, 0.3);
+    --parrafo: 1rem;
+    --menu: 1rem;
+    --titulo: 1.8rem;
+    --subtitulo: 1.2rem;
+}
+/*fuentes*/
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Mulish-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto-negrita';
+    src: url(../fonts/Mulish-Light.ttf);
+}
+@font-face {
+    font-family: 'MarckScript';
+    src: url(../fonts/Satisfy-Regular.ttf);
+}
+/*reset*/
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+body{
+    font-family: "Roboto";
+    background-color: var(--claro2);
+    font-size: var(--parrafo);
+}
+.contenedor{
+    max-width: 1200px;
+    width: 100%;/*para dispositivos mas pequeños*/
+    margin: 0 auto;
+    padding: 0 10px;
+}
+section{
+padding: 30px 10px;
+}
+.titulo-seccion{
+color: var(--principal);
+text-align: center;
+padding-bottom: 20px;
+font-size: var(--titulo);
+font-family: 'Roboto-negrita';
+}
+p{
+    line-height: 150%;
+    text-align: justify;
+    color: black;
+    margin: 15px;
+}
+
+img{
+    width: 100%;
+}
+/*header*/
+header{
+    background-image: url(../img/chef2.webp);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+/* portada para cafeteriaa */
+header.cafeteria{
+    background-image: url(../img/portadacafe.webp);
+}
+/* portada para comida nacional */
+header.comidanacional{
+    background-image: url(../img/comidaport.webp);
+}
+/* portada para comida internacional */
+header.comidainternacional{
+    background-image: url(../img/portada1.webp);
+}
+/* portada para comida cockteleria */
+header.cockteleria{
+    background-image: url(../img/cockteleria/portadacockteleria.jpg);
+}
+/* portada para reposteria */
+header.reposteria{
+    background-image: url(../img/reposteria/portadarepos.jpg);
+}
+/* portada para comida vegetariana */
+header.comidavegetariana{
+    background-image: url(../img/vegetariana/portadaveget.jpg);
+}
+.color-fondo{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.menu-principal{
+    text-align: right;
+    margin-bottom: 1rem;
+    padding: 2em 0;
+}
+
+.menu-principal ul{
+    list-style-type: none;
+}
+.menu-principal ul li{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.8em 0.5rem;
+}
+.menu-principal ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: var(--menu);
+    font-weight: bold;
+}
+.menu-principal ul li a:hover{
+    border-bottom: 2px solid #e1f82e;
+    text-shadow: 0px 0px 5px white;     /*eje x eje y tamaño*/
+   
+}
+/*.menu-principal ul li:hover{
+    background-color: rgba (255 255 255 0.2);
+    transition: ease all 0.5s;
+       
+}*/
+header .titulo{
+    font-family: "MarckScript";
+    color: white;
+    text-align: center;
+    line-height: 150%;
+    font-size: 2.5rem;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 600px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+header .titulo p{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+/*acerca de */
+.acercade{
+    background-color: white;
+}
+/*areas de formacion*/
+.padre-tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tarjeta{
+    width: 30%;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;   
+}
+.tarjeta .flotar{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+
+    display: none;
+}
+.tarjeta:hover .flotar{
+    display: block;
+    transition: ease all 1s;
+}
+.tarjeta:hover img{
+    filter: grayscale(1);
+}
+.tarjeta .flotar h3{
+    color: white;
+    font-size: 1,5rem;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 50px;
+}
+.tarjeta .flotar a{
+    background-color: var(--principal);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 100px;/*al estar en absolute ya no reconoce*/
+}
+.tarjeta .flotar a:hover{
+    background-color: var(--secundario);
+    transition: all ease 0.5s;
+}
+
+/* PENSUM */
+.pensum table{
+    width: 100%;
+    border: 2px solid var(--secundario);
+    border-collapse: collapse;
+    font-size: var(--subtitulo);
+}
+
+.pensum table tr th,
+.pensum table tr td{
+    padding: 20px 30px;
+    width: 30%;
+    line-height: 200%;
+}
+
+.pensum table tr th{
+    border-bottom: 2px solid var(--secundario);
+    font-size: 1.5rem;
+}
+
+.pensum{
+    background-color: #FFF;
+}
+
+.naranja{
+    background-color: var(--claro3);
+    border-left: 2px solid var(--secundario);
+    border-right: 2px solid var(--secundario);
+}
+
+/* FORMULARIO DE CONTACTO */
+.contacto form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--subtitulo);
+}
+
+.contacto form label{
+    width: 20%;
+    margin-top: 30px;
+}
+
+.contacto form input,
+.contacto form textarea{
+    width: 80%;
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: var(--subtitulo);
+    border: 1px solid var(--oscuro);
+    border-radius: 5px;
+    color: #000;
+}
+.contacto form textarea{
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 150px;
+    max-height: 150px;
+    font-family: "Roboto";
+}
+
+.contacto form input:invalid,
+.contacto form textarea:invalid{
+    border: 1px solid var(--principal);
+}
+
+.contacto form input:valid,
+.contacto form textarea:valid{
+    border: 1px solid green;
+}
+
+.contacto form input[type="submit"],
+.contacto form input[type="reset"]{
+    background-color: var(--oscuro);
+    color: #FFF;
+    width: 40%;
+    border: transparent;
+}
+
+.contacto form input[type="submit"]:hover,
+.contacto form input[type="reset"]:hover{
+    box-shadow: 0px 0px 10px var(--oscuro);
+}
+
+/* DIRECCION */
+.direccion{
+    background-color: #FFF;
+}
+
+.direccion .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.direccion .contenedor article{
+    width: 50%;
+}
+
+.direccion .contenedor h2{
+    display: block;
+    width: 100%;
+}
+
+.direccion .contenedor article p{
+    text-align: center;
+    padding: 0 30px;
+    margin: 5px;
+}
+
+.direccion iframe{
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: var(--oscuro);
+    padding: 30px 20px;
+    margin-top: -5px;
+}
+
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .contenedor a{
+    color: #fff;
+    font-size: var(--titulo);
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 15px 0;
+    border-radius: 64.2%;
+}
+footer .facebook:hover{
+    /* background-color: #1877f2; */
+    background: radial-gradient(circle at 30% 107%, #1877f2 0%, #1877f2 5%, #090dca 45%,#ffff 60%,#1877f2 90%);
+    transition: all 0.5s ease;
+}
+footer .youtube:hover{
+    background-color: #ff0000;
+    /* background: radial-gradient(circle at 30% 107%, #ffff 0%, #ffff 5%, #fd5949 45%,#ff0000 60%,#ff0000 90%); */
+    transition: all 0.5s ease;
+}
+footer .whatsaap:hover{
+    background-color: #128c7e;
+    transition: all 0.5s ease;
+}
+footer .instagram:hover{
+    background: radial-gradient(circle at 20% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    transition: all 0.5s ease;
+}
+footer .tiktok:hover{
+    background-color: #000;
+    transition: all 0.5s ease;
+}
+footer .twitter:hover{
+    background-color: #1da1f2;
+    transition: all 0.5s ease;
+}
+.pensum-celular{
+    display: none;
+}
+section.direccion{
+    padding-bottom: 0;
+    
+}
+/* header .contenedor .boton-menu-movil{
+    color: #FFF;
+    font-size: var(--subtitulo);
+    text-align: right;
+    position: relative;
+    display: none;
+} */
+/* Menu movil */
+header .contenedor .boton-menu-movil{
+    color: #FFF;
+    font-size: var(--subtitulo);
+    position: relative;
+    display: none;
+}
+footer p{
+    text-align: center;
+    color: white;
+    margin: 10 px 0 0 0;
+}
+
+/* tableta  768 a 1024*/
+@media screen and (max-width: 1024px){
+    .tarjeta{
+        width: 48%;
+    }
+    .pensum table tr th{
+        font-size: 1.2rem;
+    }
+    .pensum table {
+        font-size: 1rem;
+    }
+    .titulo-seccion {
+        font-size: 1.5rem;
+    }
+
+    .direccion .contenedor article {
+        width: 100%;
+    }
+    header .titulo h1{
+        font-size: 3rem;
+    }
+}
+/* Celular 0 a 768 */
+@media screen and (max-width: 768px){
+    header .titulo h1{
+        font-size: 2.5rem;
+    }
+    header ,.titulo p{
+        font-size: 1.5rem;
+    }
+    .tarjeta {
+        width: 100%;
+    }
+    .pensum table {
+        display: none;
+    }
+    .pensum table.pensum-celular{
+        display: block;
+    }
+    .pensum-celular .naranja {
+        border: none;
+    }
+
+    .pensum-celular th.naranja{
+        border-top: 2px solid var(--claro3);
+    }
+    .pensum-celular td.naranja{
+        border-bottom: 2px solid var(--claro3);
+    }
+    .contacto form,
+    .contacto form label,
+    .contacto form input,
+    .contacto form textarea{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .contacto form input,
+    .contacto form textarea{
+       margin-top: 5px;
+       margin-bottom: 25px;
+    }
+    .contacto form label{
+        margin-top: 25px;
+    }
+
+    header .contenedor nav.menu-principal{
+        position: fixed;
+        width: 100%;
+        background-color: var(--oscuro);
+        top: 0;
+        left: 0;
+        height: 80%;
+        padding: 80px 15px;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: all 0.4s ease;
+    }
+
+    .menu-principal ul li{
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    header .contenedor .boton-menu-movil{
+        display: block;
+        text-align: right;
+        font-size: var(--titulo);
+        padding: 15px;
+        margin-bottom: 200px;
+        z-index: 11;
+    }
+
+    header .contenedor nav.abrir-menu{
+        transform: translateX(0);
+    }
+}
+
+
